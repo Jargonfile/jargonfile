@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>death code</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../D.html" title="D"/><link rel="previous" href="deadly-embrace.html" title="deadly embrace"/><link rel="next" href="Death-Square.html" title="Death Square"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">death code</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="deadly-embrace.html">Prev</a> </td><th width="60%" align="center">D</th><td width="20%" align="right"> <a accesskey="n" href="Death-Square.html">Next</a></td></tr></table><hr/></div><dt><a id="death-code"/><dt xmlns="" id="death-code"><b>death code</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> A routine whose job is to set everything in the computer &#8212;
+   registers, memory, flags, everything &#8212; to zero, including that
+   portion of memory where it is running; its last act is to <a href="../S/stomp-on.html"><i class="glossterm">stomp
+   on</i></a> its own &#8220;<span class="quote">store zero</span>&#8221; instruction.  Death code
+   isn't very useful, but writing it is an interesting hacking challenge on
+   architectures where the instruction set makes it possible, such as the
+   PDP-8 (it has also been done on the DG Nova).</p></dd><dd><p>Perhaps the ultimate death code is on the TI 990 series, where all
+   registers are actually in RAM, and the instruction &#8220;<span class="quote">store immediate
+   0</span>&#8221; has the opcode &#8220;<span class="quote">0</span>&#8221;. The PC will immediately wrap
+   around core as many times as it can until a user hits HALT.  Any empty
+   memory location is death code.  Worse, the manufacturer recommended use of
+   this instruction in startup code (which would be in ROM and therefore
+   survive).</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="deadly-embrace.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../D.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="Death-Square.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">deadly embrace </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> Death Square</td></tr></table></div></body></html>

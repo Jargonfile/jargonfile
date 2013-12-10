@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>dead code</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../D.html" title="D"/><link rel="previous" href="dead-beef-attack.html" title="dead beef attack"/><link rel="next" href="dead-tree-version.html" title="dead-tree version"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">dead code</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="dead-beef-attack.html">Prev</a> </td><th width="60%" align="center">D</th><td width="20%" align="right"> <a accesskey="n" href="dead-tree-version.html">Next</a></td></tr></table><hr/></div><dt><a id="dead-code"/><dt xmlns="" id="dead-code"><b>dead code</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> Routines that can never be accessed because all calls to them have
+   been removed, or code that cannot be reached because it is guarded by a
+   control structure that provably must always transfer control somewhere
+   else.  The presence of dead code may reveal either logical errors due to
+   alterations in the program or significant changes in the assumptions and
+   environment of the program (see also <a href="../S/software-rot.html"><i class="glossterm">software rot</i></a>);
+   a good compiler should report dead code so a maintainer can think about
+   what it means.  (Sometimes it simply means that an
+   <span class="emphasis"><em>extremely</em></span> defensive programmer has inserted
+   <a href="../C/can-t-happen.html"><i class="glossterm">can't happen</i></a> tests which really can't happen &#8212;
+   yet.)  Syn. <a href="../G/grunge.html"><i class="glossterm">grunge</i></a>.  See also
+   <a href="dead.html"><i class="glossterm">dead</i></a>, and 
+   <a href="../story-of-mel.html" title="The Story of Mel">The Story of Mel'</a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="dead-beef-attack.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../D.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="dead-tree-version.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">dead beef attack </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> dead-tree version</td></tr></table></div></body></html>

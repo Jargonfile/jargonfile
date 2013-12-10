@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>thunk</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../T.html" title="T"/><link rel="previous" href="thundering-herd-problem.html" title="thundering herd problem"/><link rel="next" href="tick.html" title="tick"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">thunk</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="thundering-herd-problem.html">Prev</a> </td><th width="60%" align="center">T</th><td width="20%" align="right"> <a accesskey="n" href="tick.html">Next</a></td></tr></table><hr/></div><dt><a id="thunk"/><dt xmlns="" id="thunk"><b>thunk</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="pronunciation">/thuhnk/</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> 1. [obs.]&#8220;<span class="quote">A piece of coding which provides an
+   address:</span>&#8221;, according to P. Z. Ingerman, who invented thunks in 1961
+   as a way of binding actual parameters to their formal definitions in
+   Algol-60 procedure calls.  If a procedure is called with an expression in
+   the place of a formal parameter, the compiler generates a thunk which
+   computes the expression and leaves the address of the result in some
+   standard location.  </p></dd><dd><p> 2. Later generalized into: an expression, frozen together with its
+   environment, for later evaluation if and when needed (similar to what in
+   techspeak is called a <span class="firstterm">closure</span>).  The
+   process of unfreezing these thunks is called <span class="firstterm">forcing</span>.  </p></dd><dd><p> 3. A <a href="../S/stubroutine.html"><i class="glossterm">stubroutine</i></a>, in an overlay programming
+   environment, that loads and jumps to the correct overlay.  Compare
+   <a href="trampoline.html"><i class="glossterm">trampoline</i></a>.</p></dd><dd><p>4.  Microsoft and IBM have both defined, in their Intel-based
+   systems, a &#8220;<span class="quote">16-bit environment</span>&#8221; (with bletcherous segment
+   registers and 64K address limits) and a &#8220;<span class="quote">32-bit environment</span>&#8221;
+   (with flat addressing and semi-real memory management). The two
+   environments can both be running on the same computer and OS (thanks to
+   what is called, in the Microsoft world, WOW which stands for Windows On
+   Windows). MS and IBM have both decided that the process of getting from 16-
+   to 32-bit and vice versa is called a &#8220;<span class="quote">thunk</span>&#8221;; for Windows 95,
+   there is even a tool THUNK.EXE called a &#8220;<span class="quote">thunk compiler</span>&#8221;.
+   </p></dd><dd><p> 5. A person or activity scheduled in a thunklike manner.  &#8220;<span class="quote">It
+   occurred to me the other day that I am rather accurately modeled by a thunk
+   &#8212; I frequently need to be forced to completion.:</span>&#8221; &#8212;
+   paraphrased from a <a href="../P/plan-file.html"><i class="glossterm">plan file</i></a>.</p></dd><dd><p>Historical note: There are a couple of onomatopoeic myths circulating
+   about the origin of this term.  The most common is that it is the sound
+   made by data hitting the stack; another holds that the sound is that of the
+   data hitting an accumulator.  Yet another suggests that it is the sound of
+   the expression being unfrozen at argument-evaluation time.  In fact,
+   according to the inventors, it was coined after they realized (in the wee
+   hours after hours of discussion) that the type of an argument in Algol-60
+   could be figured out in advance with a little compile-time thought,
+   simplifying the evaluation machinery.  In other words, it had
+   &#8216;already been thought of&#8217;; thus it was christened a <span class="firstterm">thunk</span>, which is &#8220;<span class="quote">the past tense of
+   &#8216;think&#8217; at two in the morning</span>&#8221;.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="thundering-herd-problem.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../T.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="tick.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">thundering herd problem </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> tick</td></tr></table></div></body></html>

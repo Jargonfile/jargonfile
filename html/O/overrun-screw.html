@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>overrun screw</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../O.html" title="O"/><link rel="previous" href="overrun.html" title="overrun"/><link rel="next" href="owned.html" title="owned"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">overrun screw</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="overrun.html">Prev</a> </td><th width="60%" align="center">O</th><td width="20%" align="right"> <a accesskey="n" href="owned.html">Next</a></td></tr></table><hr/></div><dt><a id="overrun-screw"/><dt xmlns="" id="overrun-screw"><b>overrun screw</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [C programming] A variety of <a href="../F/fandango-on-core.html"><i class="glossterm">fandango on core</i></a>
+   produced by scribbling past the end of an array (C implementations
+   typically have no checks for this error).  This is relatively benign and
+   easy to spot if the array is static; if it is auto, the result may be to
+   <a href="../S/smash-the-stack.html"><i class="glossterm">smash the stack</i></a> &#8212; often resulting in
+   <a href="../H/heisenbug.html"><i class="glossterm">heisenbug</i></a>s of the most diabolical subtlety.  The
+   term <span class="firstterm">overrun screw</span> is used esp. of
+   scribbles beyond the end of arrays allocated with
+   <span class="citerefentry"><span class="refentrytitle">malloc</span>(3)</span>;
+   this typically trashes the allocation header for the next block in the
+   <a href="../A/arena.html"><i class="glossterm">arena</i></a>, producing massive lossage within malloc and
+   often a core dump on the next operation to use
+   <span class="citerefentry"><span class="refentrytitle">stdio</span>(3)</span>
+   or
+   <span class="citerefentry"><span class="refentrytitle">malloc</span>(3)</span>
+   itself.  See <a href="../S/spam.html"><i class="glossterm">spam</i></a>, <a href="overrun.html"><i class="glossterm">overrun</i></a>;
+   see also <a href="../M/memory-leak.html"><i class="glossterm">memory leak</i></a>, 
+   <a href="../M/memory-smash.html"><i class="glossterm">memory smash</i></a>, <a href="../A/aliasing-bug.html"><i class="glossterm">aliasing bug</i></a>,
+   <a href="../P/precedence-lossage.html"><i class="glossterm">precedence lossage</i></a>, 
+   <a href="../F/fandango-on-core.html"><i class="glossterm">fandango on core</i></a>, <a href="../S/secondary-damage.html"><i class="glossterm">secondary damage</i></a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="overrun.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../O.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="owned.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">overrun </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> owned</td></tr></table></div></body></html>

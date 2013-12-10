@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>vaxocentrism</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../V.html" title="V"/><link rel="previous" href="VAXen.html" title="VAXen"/><link rel="next" href="vdiff.html" title="vdiff"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">vaxocentrism</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="VAXen.html">Prev</a> </td><th width="60%" align="center">V</th><td width="20%" align="right"> <a accesskey="n" href="vdiff.html">Next</a></td></tr></table><hr/></div><dt><a id="vaxocentrism"/><dt xmlns="" id="vaxocentrism"><b>vaxocentrism</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="pronunciation">/vak`soh·sen´trizm/</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [analogy with &#8216;ethnocentrism&#8217;] A notional disease said
+   to afflict C programmers who persist in coding according to certain
+   assumptions that are valid (esp. under Unix) on
+   <a href="VAXen.html"><i class="glossterm">VAXen</i></a> but false elsewhere. Among these are:</p><div class="orderedlist"><ol type="1"><li><p>
+The assumption that dereferencing a null pointer is safe because it is all
+bits 0, and location 0 is readable and 0.  Problem: this may instead cause an
+illegal-address trap on non-VAXen, and even on VAXen under OSes other than BSD
+Unix.  Usually this is an implicit assumption of sloppy code (forgetting to
+check the pointer before using it), rather than deliberate exploitation of a
+misfeature.  </p></li><li><p>
+The assumption that characters are signed.  </p></li><li><p>
+The assumption that a pointer to any one type can freely be cast into a
+pointer to any other type.  A stronger form of this is the assumption that all
+pointers are the same size and format, which means you don't have to worry
+about getting the casts or types correct in calls.  Problem: this fails on
+word-oriented machines or others with multiple pointer formats.
+</p></li><li><p>
+The assumption that the parameters of a routine are stored in memory, on a
+stack, contiguously, and in strictly ascending or descending order.  Problem:
+this fails on many RISC architectures.  </p></li><li><p>
+The assumption that pointer and integer types are the same size, and that
+pointers can be stuffed into integer variables (and vice-versa) and drawn back
+out without being truncated or mangled.  Problem: this fails on segmented
+architectures or word-oriented machines with funny pointer formats.
+</p></li><li><p>
+The assumption that a data type of any size may begin at any byte address in
+memory (for example, that you can freely construct and dereference a pointer
+to a word- or greater-sized object at an odd char address).  Problem: this
+fails on many (esp. RISC) architectures better optimized for
+<a href="../H/HLL.html"><i class="glossterm">HLL</i></a> execution speed, and can cause an illegal address
+fault or bus error.  </p></li><li><p>
+The (related) assumption that there is no padding at the end of types and that
+in an array you can thus step right from the last byte of a previous component
+to the first byte of the next one.  This is not only machine- but
+compiler-dependent.  </p></li><li><p>
+The assumption that memory address space is globally flat and that the array
+reference <b class="command">foo[-1]</b> is necessarily valid.
+Problem: this fails at 0, or other places on segment-addressed machines like
+Intel chips (yes, segmentation is universally considered a
+<a href="../B/brain-damaged.html"><i class="glossterm">brain-damaged</i></a> way to design machines (see
+<a href="../M/moby.html"><i class="glossterm">moby</i></a>), but that is a separate issue).
+</p></li><li><p>
+The assumption that objects can be arbitrarily large with no special
+considerations.  Problem: this fails on segmented architectures and under
+non-virtual-addressing environments.  </p></li><li><p>
+The assumption that the stack can be as large as memory.  Problem: this fails
+on segmented architectures or almost anything else without virtual addressing
+and a paged stack.  </p></li><li><p>
+The assumption that bits and addressable units within an object are ordered in
+the same way and that this order is a constant of nature.  Problem: this fails
+on <a href="../B/big-endian.html"><i class="glossterm">big-endian</i></a> machines.  </p></li><li><p>
+The assumption that it is meaningful to compare pointers to different objects
+not located within the same array, or to objects of different types.  Problem:
+the former fails on segmented architectures, the latter on word-oriented
+machines or others with multiple pointer formats.  </p></li><li><p>
+The assumption that an <span class="type">int</span> is 32 bits, or (nearly equivalently)
+the assumption that <b class="command">sizeof(int) ==
+sizeof(long)</b>.  Problem: this fails on <a href="../P/PDP-11.html"><i class="glossterm">PDP-11</i></a>s, 286-based systems and
+even on 386 and 68000 systems under some compilers (and on 64-bit systems like
+the Alpha, of course).  </p></li><li><p>
+The assumption that <b class="command">argv[]</b> is
+writable. Problem: this fails in many embedded-systems C environments and even
+under a few flavors of Unix.  </p></li></ol></div><p>Note that a programmer can validly be accused of vaxocentrism even if
+   he or she has never seen a <a href="VAX.html"><i class="glossterm">VAX</i></a>.  Some of these
+   assumptions (esp. 2--5) were valid on the <a href="../P/PDP-11.html"><i class="glossterm">PDP-11</i></a>,
+   the original C machine, and became endemic years before the VAX.  The terms
+   <span class="firstterm">vaxocentricity</span> and <span class="firstterm">all-the-world's-a-VAX syndrome</span> have been used
+   synonymously.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="VAXen.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../V.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="vdiff.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">VAXen </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> vdiff</td></tr></table></div></body></html>

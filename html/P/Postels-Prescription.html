@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Postel's Prescription</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../P.html" title="P"/><link rel="previous" href="postcardware.html" title="postcardware"/><link rel="next" href="posting.html" title="posting"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Postel's Prescription</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="postcardware.html">Prev</a> </td><th width="60%" align="center">P</th><td width="20%" align="right"> <a accesskey="n" href="posting.html">Next</a></td></tr></table><hr/></div><dt><a id="Postels-Prescription"/><dt xmlns="" id="Postels-Prescription"><b>Postel's Prescription</b></dt></dt><dd><p>[proposed] Several of the key Internet <a href="../R/RFC.html"><i class="glossterm">RFC</i></a>s,
+   especially 1122 and 791 contain a piece of advice due to Jon Postel, 
+   which is most often stated as:</p><div class="blockquote"><blockquote class="blockquote"><p>&#8220;<span class="quote">Be liberal in what you accept, and conservative in what you
+   send.</span>&#8221;</p></blockquote></div><p>That is, a well-engineered implementation of any of the
+   Internet protocols should be willing to deal with marginal
+   and imperfectly-formed inputs, but should not assume that the
+   program on the other end (that is, the program dealing with the
+   well-engineered implementation's output) will be anything other
+   than rigid and inflexible, and perhaps even incomplete or downright
+   buggy.</p><p>This property is valuable because a network of programs adhering
+   to it will be much more robust in the presence of any uncertainties
+   in the protocol specifications, or any individual implementor's
+   failure to understand those specifications perfectly.  Though the
+   policy does tend to accommodate broken implementations it is held
+   to more important to get the communication flowing than to
+   immediately (but terminally) diagnose the broken implementations
+   at the expense of the people trying to use them.</p><p>The principle is a well-known one in the design of programs
+   that handle Internet wire protocols, especially network
+   relays and servers, and it is regularly applied by extension
+   in any situation where two or more separately-implemented
+   pieces of software are supposed to interoperate even though the
+   various implementors have never talked to each other and have
+   absolutely nothing whatsoever in common other than having
+   all read the same protocol specification.  The principle travels
+   under several different names, including &#8220;<span class="quote">the Internet credo</span>&#8221;,
+   &#8220;<span class="quote">the IETF maxim</span>&#8221;, &#8220;<span class="quote">the Internet Engineering
+   Principle</span>&#8221;, and
+   &#8220;<span class="quote">the liberal/conservative rule</span>&#8221;; the [proposed] term
+   &#8220;<span class="quote">Postel' Prescription</span>&#8221; is a tribute to its inventor, the first
+   RFC editor
+   and (until his untimely death) probably the single most respected
+   individual in the Internet engineering community.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="postcardware.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../P.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="posting.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">postcardware </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> posting</td></tr></table></div></body></html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Obfuscated C Contest</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../O.html" title="O"/><link rel="previous" href="Ob-.html" title="Ob-"/><link rel="next" href="obi-wan-error.html" title="obi-wan error"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Obfuscated C Contest</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="Ob-.html">Prev</a> </td><th width="60%" align="center">O</th><td width="20%" align="right"> <a accesskey="n" href="obi-wan-error.html">Next</a></td></tr></table><hr/></div><dt><a id="Obfuscated-C-Contest"/><dt xmlns="" id="Obfuscated-C-Contest"><b>Obfuscated C Contest</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> (in full, the &#8216;International Obfuscated C Code Contest&#8217;,
+   or IOCCC) An annual contest run since 1984 over Usenet by Landon Curt Noll
+   and friends.  The overall winner is whoever produces the most unreadable,
+   creative, and bizarre (but working) C program; various other prizes are
+   awarded at the judges' whim.  C's terse syntax and macro-preprocessor
+   facilities give contestants a lot of maneuvering room.  The winning
+   programs often manage to be simultaneously (a) funny, (b) breathtaking
+   works of art, and (c) horrible examples of how <span class="emphasis"><em>not</em></span> to
+   code in C.</p><p>This relatively short and sweet entry might help convey the flavor of
+   obfuscated C:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+/*
+ * HELLO WORLD program
+ * by Jack Applin and Robert Heckendorn, 1985
+ * (Note: depends on being able to modify elements of argv[],
+ * which is not guaranteed by ANSI and often not possible.)
+ */
+main(v,c)char**c;{for(v[c++]=&quot;Hello, world!\n)&quot;;
+(!!c)[*c]&amp;&amp;(v--||--c&amp;&amp;execlp(*c,*c,c[!!c]+!!c,!c));
+**c=!c)write(!!*c,*c,!!**c);}
+</pre></td></tr></table><p>Here's another good one:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+/*
+ * Program to compute an approximation of pi
+ * by Brian Westley, 1988
+ * (requires pcc macro concatenation; try gcc -traditional-cpp)
+ */
+
+#define _ -F&lt;00||--F-OO--;
+int F=00,OO=00;
+main(){F_OO();printf(&quot;%1.3f\n&quot;,4.*-F/OO/OO);}F_OO()
+{
+            _-_-_-_
+       _-_-_-_-_-_-_-_-_
+    _-_-_-_-_-_-_-_-_-_-_-_
+  _-_-_-_-_-_-_-_-_-_-_-_-_-_
+ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  _-_-_-_-_-_-_-_-_-_-_-_-_-_
+    _-_-_-_-_-_-_-_-_-_-_-_
+        _-_-_-_-_-_-_-_
+            _-_-_-_
+}
+</pre></td></tr></table><p>Note that this program works by computing its own area.  For more
+   digits, write a bigger program.  See also 
+   <a href="../H/hello-world.html"><i class="glossterm">hello world</i></a>.</p><p>The IOCCC has an official home page at <a href="http://www.ioccc.org/" target="_top">http://www.ioccc.org/</a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="Ob-.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../O.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="obi-wan-error.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Ob- </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> obi-wan error</td></tr></table></div></body></html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 6. Email Quotes and Inclusion Conventions</title><link rel="stylesheet" href="jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="index.html" title="The Jargon File"/><link rel="up" href="pt01.html" title="Part I. Introduction"/><link rel="previous" href="writing-style.html" title="Chapter 5. Hacker Writing Style"/><link rel="next" href="speech-style.html" title="Chapter 7. Hacker Speech Style"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 6. Email Quotes and Inclusion Conventions</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="writing-style.html">Prev</a> </td><th width="60%" align="center">Part I. Introduction</th><td width="20%" align="right"> <a accesskey="n" href="speech-style.html">Next</a></td></tr></table><hr/></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="email-style"/>Chapter 6. Email Quotes and Inclusion Conventions</h2></div></div><div/></div><p>One area where conventions for on-line writing are still in some flux is
+the marking of included material from earlier messages — what would be
+called ‘block quotations’ in ordinary English.  From the usual
+typographic convention employed for these (smaller font at an extra indent),
+there derived a practice of included text being indented by one ASCII TAB
+(0001001) character, which under Unix and many other environments gives the
+appearance of an 8-space indent.</p><p>Early mail and netnews readers had no facility for including messages
+this way, so people had to paste in copy manually.  BSD
+<span class="citerefentry"><span class="refentrytitle">Mail</span>(1)</span> was the first message agent to support inclusion,
+and early Usenetters emulated its style.  But the TAB character tended to push
+included text too far to the right (especially in multiply nested inclusions),
+leading to ugly wraparounds.  After a brief period of confusion (during which
+an inclusion leader consisting of three or four spaces became established in
+EMACS and a few mailers), the use of leading <tt class="literal">&gt;</tt> or
+<tt class="literal">&gt; </tt> became standard, perhaps owing to its use in
+<span class="citerefentry"><span class="refentrytitle">ed</span>(1)</span> to display tabs (alternatively, it may derive from
+the <tt class="literal">&gt;</tt> that some early Unix mailers used to quote lines
+starting with &quot;From&quot; in text, so they wouldn't look like the beginnings of new
+message headers).  Inclusions within inclusions keep their
+<tt class="literal">&gt;</tt> leaders, so the ‘nesting level' of a quotation
+is visually apparent.</p><p>The practice of including text from the parent article when posting a
+followup helped solve what had been a major nuisance on Usenet: the fact that
+articles do not arrive at different sites in the same order.  Careless posters
+used to post articles that would begin with, or even consist entirely of,
+“<span class="quote">No, that's wrong</span>” or “<span class="quote">I agree</span>” or the like.  It was
+hard to see who was responding to what.  Consequently, around 1984, new
+news-posting software evolved a facility to automatically include the text of
+a previous article, marked with “&gt; ” or whatever the poster
+chose.  The poster was expected to delete all but the relevant lines.  The
+result has been that, now, careless posters post articles containing the
+<span class="emphasis"><em>entire</em></span> text of a preceding article,
+<span class="emphasis"><em>followed</em></span> only by “<span class="quote">No, that's wrong</span>” or
+“<span class="quote">I agree</span>”.</p><p>Many people feel that this cure is worse than the original disease, and
+there soon appeared newsreader software designed to let the reader skip over
+included text if desired.  Today, some posting software rejects articles
+containing too high a proportion of lines beginning with ‘&gt;' —
+but this too has led to undesirable workarounds, such as the deliberate
+inclusion of zero-content filler lines which aren't quoted and thus pull the
+message below the rejection threshold.</p><p>Inclusion practice is still evolving, and disputes over the
+‘correct’ inclusion style occasionally lead to
+<a href="H/holy-wars.html"><i class="glossterm">holy wars</i></a>.</p><p>Most netters view an inclusion as a promise that comment on it will
+immediately follow.  The preferred, conversational style looks like
+this,</p><div class="literallayout"><p><br/>
+     &gt; relevant excerpt 1<br/>
+     response to excerpt<br/>
+     &gt; relevant excerpt 2<br/>
+     response to excerpt<br/>
+     &gt; relevant excerpt 3<br/>
+     response to excerpt<br/>
+</p></div><p>or for short messages like this:</p><div class="literallayout"><p><br/>
+     &gt; entire message<br/>
+     response to message<br/>
+</p></div><p>Thanks to poor design of some PC-based mail agents (notably Microsoft
+Outlook and Outlook Express), one will occasionally see the entire quoted
+message <span class="emphasis"><em>after</em></span> the response, like this</p><div class="literallayout"><p><br/>
+     response to message<br/>
+     &gt; entire message<br/>
+</p></div><p>but this practice is strongly deprecated.</p><p>Though <tt class="literal">&gt;</tt> remains the standard inclusion leader,
+<tt class="literal">|</tt> is occasionally used for extended quotations where
+original variations in indentation are being retained (one mailer even
+combines these and uses <tt class="literal">|&gt;</tt>).  One also sees different
+styles of quoting a number of authors in the same message: one (deprecated
+because it loses information) uses a leader of <tt class="literal">&gt; </tt> for
+everyone, another (the most common) is <tt class="literal">&gt; &gt; &gt; &gt;
+</tt>, <tt class="literal">&gt; &gt; &gt; </tt>, etc. (or
+<tt class="literal">&gt;&gt;&gt;&gt; </tt>, <tt class="literal">&gt;&gt;&gt;</tt>, etc.,
+depending on line length and nesting depth) reflecting the original order of
+messages, and yet another is to use a different citation leader for each
+author, say <tt class="literal">&gt; </tt>, <tt class="literal">: </tt>, <tt class="literal">|
+</tt>, <tt class="literal">@</tt> (preserving nesting so that the inclusion
+order of messages is still apparent, or tagging the inclusions with authors'
+names).  Yet <span class="emphasis"><em>another</em></span> style is to use each poster's
+initials (or login name) as a citation leader for that poster.</p><p>Occasionally one sees a <tt class="literal"># </tt> leader used for quotations
+from authoritative sources such as standards documents; the intended allusion
+is to the root prompt (the special Unix command prompt issued when one is
+running as the privileged super-user).</p></div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="writing-style.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="pt01.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="speech-style.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 5. Hacker Writing Style </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 7. Hacker Speech Style</td></tr></table></div></body></html>

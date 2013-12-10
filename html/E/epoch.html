@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>epoch</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../E.html" title="E"/><link rel="previous" href="EOU.html" title="EOU"/><link rel="next" href="epsilon.html" title="epsilon"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">epoch</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="EOU.html">Prev</a> </td><th width="60%" align="center">E</th><td width="20%" align="right"> <a accesskey="n" href="epsilon.html">Next</a></td></tr></table><hr/></div><dt><a id="epoch"/><dt xmlns="" id="epoch"><b>epoch</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [Unix: prob.: from astronomical timekeeping] The time and date
+   corresponding to 0 in an operating system's clock and timestamp values.
+   Under most Unix versions the epoch is 00:00:00 GMT, January 1, 1970; under
+   VMS, it's 00:00:00 of November 17, 1858 (base date of the U.S. Naval
+   Observatory's ephemerides); on a Macintosh, it's the midnight beginning
+   January 1 1904.  System time is measured in seconds or
+   <a href="../T/tick.html"><i class="glossterm">tick</i></a>s past the epoch.  Weird problems may ensue when
+   the clock wraps around (see <a href="../W/wrap-around.html"><i class="glossterm">wrap around</i></a>), which is
+   not necessarily a rare event; on systems counting 10 ticks per second, a
+   signed 32-bit count of ticks is good only for 6.8 years.  The
+   1-tick-per-second clock of Unix is good only until January 18, 2038,
+   assuming at least some software continues to consider it signed and that
+   word lengths don't increase by then.  See also 
+   <a href="../W/wall-time.html"><i class="glossterm">wall time</i></a>.  Microsoft Windows, on the other hand, has an epoch
+   problem every 49.7 days &#8212; but this is seldom noticed as Windows is almost
+   incapable of staying up continuously for that long.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="EOU.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../E.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="epsilon.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">EOU </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> epsilon</td></tr></table></div></body></html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>indent style</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../I.html" title="I"/><link rel="previous" href="include-war.html" title="include war"/><link rel="next" href="Indent-o-Meter.html" title="Indent-o-Meter"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">indent style</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="include-war.html">Prev</a> </td><th width="60%" align="center">I</th><td width="20%" align="right"> <a accesskey="n" href="Indent-o-Meter.html">Next</a></td></tr></table><hr/></div><dt><a id="indent-style"/><dt xmlns="" id="indent-style"><b>indent style</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [C, C++, and Java programmers] The rules one uses to indent code in
+   a readable fashion.  There are four major C indent styles, described below;
+   all have the aim of making it easier for the reader to visually track the
+   scope of control constructs.  They have been inherited by C++ and Java,
+   which have C-like syntaxes.  The significant variable is the placement of
+   <tt class="literal">{</tt> and <tt class="literal">}</tt> with respect to the
+   statement(s) they enclose and to the guard or controlling statement
+   (<b class="command">if</b>, <b class="command">else</b>,
+   <b class="command">for</b>, <b class="command">while</b>,
+   or <b class="command">do</b>) on the block, if any.</p><p><span class="firstterm">K&amp;R style</span> &#8212; Named
+   after Kernighan &amp; Ritchie, because the examples in <a href="../K/K-ampersand-R.html"><i class="glossterm">K&amp;R</i></a> are formatted this way.  Also
+   called <span class="firstterm">kernel style</span> because the Unix
+   kernel is written in it, and the &#8216;One True Brace Style&#8217;
+   (abbrev. 1TBS) by its partisans.  In C code, the body is typically indented
+   by eight spaces (or one tab) per level, as shown here. Four spaces are
+   occasionally seen in C, but in C++ and Java four tends to be the rule
+   rather than the exception.</p><div class="literallayout"><p><br/>
+if (&lt;cond&gt;) {<br/>
+        &lt;body&gt;<br/>
+}<br/>
+</p></div><p><span class="firstterm">Allman style</span> &#8212; Named for
+   Eric Allman, a Berkeley hacker who wrote a lot of the BSD utilities in it
+   (it is sometimes called <span class="firstterm">BSD style</span>).
+   Resembles normal indent style in Pascal and Algol.  It is the only style
+   other than K&amp;R in widespread use among Java programmers. Basic indent
+   per level shown here is eight spaces, but four (or sometimes three) spaces
+   are generally preferred by C++ and Java programmers.</p><div class="literallayout"><p><br/>
+if (&lt;cond&gt;)<br/>
+{<br/>
+        &lt;body&gt;<br/>
+}<br/>
+</p></div><p><span class="firstterm">Whitesmiths style</span> &#8212;
+   popularized by the examples that came with Whitesmiths C, an early
+   commercial C compiler.  Basic indent per level shown here is eight spaces,
+   but four spaces are occasionally seen.</p><div class="literallayout"><p><br/>
+if (&lt;cond&gt;)<br/>
+        {<br/>
+        &lt;body&gt;<br/>
+        }<br/>
+</p></div><p><span class="firstterm">GNU style</span> &#8212; Used
+   throughout GNU EMACS and the Free Software Foundation code, and just about
+   nowhere else.  Indents are always four spaces per level, with <b class="command">{</b> and <b class="command">}</b> halfway
+   between the outer and inner indent levels.</p><div class="literallayout"><p><br/>
+if (&lt;cond&gt;)<br/>
+  {<br/>
+    &lt;body&gt;<br/>
+  }<br/>
+</p></div><p>Surveys have shown the Allman and Whitesmiths styles to be the most
+   common, with about equal mind shares.  K&amp;R/1TBS used to be nearly
+   universal, but is now much less common in C (the opening brace tends to get
+   lost against the right paren of the guard part in an <b class="command">if</b> or <b class="command">while</b>, which
+   is a <a href="../B/Bad-Thing.html"><i class="glossterm">Bad Thing</i></a>).  Defenders of 1TBS argue that any
+   putative gain in readability is less important than their style's relative
+   economy with vertical space, which enables one to see more code on one's
+   screen at once.  The Java Language Specification legislates not only the
+   capitalization of identifiers, but where nouns, adjectives, and verbs
+   should be in method, class, interface, and variable names (section
+   6.8). While the specification stops short of also standardizing on a
+   bracing style, all source code originating from Sun Laboratories uses the
+   K&amp;R style.  This has set a precedent for Java programmers, which most
+   follow.</p><p>Doubtless these issues will continue to be the subject of
+   <a href="../H/holy-wars.html"><i class="glossterm">holy wars</i></a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="include-war.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../I.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="Indent-o-Meter.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">include war </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> Indent-o-Meter</td></tr></table></div></body></html>

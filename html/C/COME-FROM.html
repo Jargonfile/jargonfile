@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>COME FROM</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../C.html" title="C"/><link rel="previous" href="cold-boot.html" title="cold boot"/><link rel="next" href="comm-mode.html" title="comm mode"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">COME FROM</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="cold-boot.html">Prev</a> </td><th width="60%" align="center">C</th><td width="20%" align="right"> <a accesskey="n" href="comm-mode.html">Next</a></td></tr></table><hr/></div><dt><a id="COME-FROM"/><dt xmlns="" id="COME-FROM"><b>COME FROM</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> A semi-mythical language construct dual to the &#8216;go to&#8217;;
+   <b class="command">COME FROM</b> &lt;label&gt; would cause the
+   referenced label to act as a sort of trapdoor, so that if the program ever
+   reached it control would quietly and <a href="../A/automagically.html"><i class="glossterm">automagically</i></a>
+   be transferred to the statement following the <b class="command">COME
+   FROM</b>.  <b class="command">COME FROM</b> was first
+   proposed in R. Lawrence Clark's <i class="citetitle">A Linguistic Contribution to
+   GOTO-less programming</i>, which appeared in a 1973
+   <a href="../D/Datamation.html"><i class="glossterm">Datamation</i></a> issue (and was reprinted in the April
+   1984 issue of <i class="citetitle">Communications of the ACM</i>).  This
+   parodied the then-raging &#8216;structured programming&#8217;
+   <a href="../H/holy-wars.html"><i class="glossterm">holy wars</i></a> (see <a href="considered-harmful.html"><i class="glossterm">considered
+   harmful</i></a>).  Mythically, some variants are the <span class="firstterm">assigned COME FROM</span> and the <span class="firstterm">computed COME FROM</span> (parodying some nasty
+   control constructs in FORTRAN and some extended BASICs).  Of course,
+   multi-tasking (or non-determinism) could be implemented by having more than
+   one <b class="command">COME FROM</b> statement coming from the
+   same label.</p><p>In some ways the FORTRAN <b class="command">DO</b> looks
+   like a <b class="command">COME FROM</b> statement.  After the
+   terminating statement number/<b class="command">CONTINUE</b> is
+   reached, control continues at the statement following the DO.  Some
+   generous FORTRANs would allow arbitrary statements (other than <b class="command">CONTINUE</b>) for the statement, leading to examples
+   like:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+      DO 10 I=1,LIMIT
+C imagine many lines of code here, leaving the
+C original DO statement lost in the spaghetti...
+      WRITE(6,10) I,FROB(I)
+ 10   FORMAT(1X,I5,G10.4)
+</pre></td></tr></table><p>in which the trapdoor is just after the statement labeled 10.  (This
+   is particularly surprising because the label doesn't appear to have
+   anything to do with the flow of control at all!)  While sufficiently
+   astonishing to the unsuspecting reader, this form of <b class="command">COME FROM</b> statement isn't completely general.  After
+   all, control will eventually pass to the following statement.  The
+   implementation of the general form was left to Univac FORTRAN, ca. 1975
+   (though a roughly similar feature existed on the IBM 7040 ten years
+   earlier).  The statement <b class="command">AT 100</b> would
+   perform a <b class="command">COME FROM 100</b>.  It was intended
+   strictly as a debugging aid, with dire consequences promised to anyone so
+   deranged as to use it in production code.  More horrible things had already
+   been perpetrated in production languages, however; doubters need only
+   contemplate the <b class="command">ALTER</b> verb in
+   <a href="COBOL.html"><i class="glossterm">COBOL</i></a>.  <b class="command">COME FROM</b>
+   was supported under its own name for the first time 15 years later, in
+   C-INTERCAL (see <a href="../I/INTERCAL.html"><i class="glossterm">INTERCAL</i></a>,
+   <a href="../R/retrocomputing.html"><i class="glossterm">retrocomputing</i></a>); knowledgeable observers are still
+   reeling from the shock.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="cold-boot.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../C.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="comm-mode.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">cold boot </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> comm mode</td></tr></table></div></body></html>

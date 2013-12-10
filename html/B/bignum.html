@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>bignum</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../B.html" title="B"/><link rel="previous" href="big-endian.html" title="big-endian"/><link rel="next" href="bigot.html" title="bigot"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">bignum</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="big-endian.html">Prev</a> </td><th width="60%" align="center">B</th><td width="20%" align="right"> <a accesskey="n" href="bigot.html">Next</a></td></tr></table><hr/></div><dt><a id="bignum"/><dt xmlns="" id="bignum"><b>bignum</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="pronunciation">/big´nuhm/</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [common; orig. from MIT MacLISP]</p></dd><dd><p> 1. [techspeak] A multiple-precision computer representation for very
+   large integers.  </p></dd><dd><p> 2. More generally, any very large number.  &#8220;<span class="quote">Have you ever
+   looked at the United States Budget?  There's bignums for you!</span>&#8221;
+   </p></dd><dd><p> 3. [Stanford] In backgammon, large numbers on the dice especially a
+   roll of double fives or double sixes (compare <a href="../M/moby.html"><i class="glossterm">moby</i></a>,
+   sense 4).  See also <a href="../E/El-Camino-Bignum.html"><i class="glossterm">El Camino Bignum</i></a>.</p></dd><dd><p>Sense 1 may require some explanation.  Most computer languages
+   provide a kind of data called <span class="firstterm">integer</span>, but such computer integers are usually
+   very limited in size; usually they must be smaller than
+   <tt class="literal">2<sup>31</sup></tt> (2,147,483,648).  If you
+   want to work with numbers larger than that, you have to use floating-point
+   numbers, which are usually accurate to only six or seven decimal places.
+   Computer languages that provide bignums can perform exact calculations on
+   very large numbers, such as 1000! (the factorial of 1000, which is 1000
+   times 999 times 998 times ... times 2 times 1).  For example, this
+   value for 1000!  was computed by the MacLISP system using bignums:</p><div class="literallayout"><p><br/>
+40238726007709377354370243392300398571937486421071<br/>
+46325437999104299385123986290205920442084869694048<br/>
+00479988610197196058631666872994808558901323829669<br/>
+94459099742450408707375991882362772718873251977950<br/>
+59509952761208749754624970436014182780946464962910<br/>
+56393887437886487337119181045825783647849977012476<br/>
+63288983595573543251318532395846307555740911426241<br/>
+74743493475534286465766116677973966688202912073791<br/>
+43853719588249808126867838374559731746136085379534<br/>
+52422158659320192809087829730843139284440328123155<br/>
+86110369768013573042161687476096758713483120254785<br/>
+89320767169132448426236131412508780208000261683151<br/>
+02734182797770478463586817016436502415369139828126<br/>
+48102130927612448963599287051149649754199093422215<br/>
+66832572080821333186116811553615836546984046708975<br/>
+60290095053761647584772842188967964624494516076535<br/>
+34081989013854424879849599533191017233555566021394<br/>
+50399736280750137837615307127761926849034352625200<br/>
+01588853514733161170210396817592151090778801939317<br/>
+81141945452572238655414610628921879602238389714760<br/>
+88506276862967146674697562911234082439208160153780<br/>
+88989396451826324367161676217916890977991190375403<br/>
+12746222899880051954444142820121873617459926429565<br/>
+81746628302955570299024324153181617210465832036786<br/>
+90611726015878352075151628422554026517048330422614<br/>
+39742869330616908979684825901254583271682264580665<br/>
+26769958652682272807075781391858178889652208164348<br/>
+34482599326604336766017699961283186078838615027946<br/>
+59551311565520360939881806121385586003014356945272<br/>
+24206344631797460594682573103790084024432438465657<br/>
+24501440282188525247093519062092902313649327349756<br/>
+55139587205596542287497740114133469627154228458623<br/>
+77387538230483865688976461927383814900140767310446<br/>
+64025989949022222176590433990188601856652648506179<br/>
+97023561938970178600408118897299183110211712298459<br/>
+01641921068884387121855646124960798722908519296819<br/>
+37238864261483965738229112312502418664935314397013<br/>
+74285319266498753372189406942814341185201580141233<br/>
+44828015051399694290153483077644569099073152433278<br/>
+28826986460278986432113908350621709500259738986355<br/>
+42771967428222487575867657523442202075736305694988<br/>
+25087968928162753848863396909959826280956121450994<br/>
+87170124451646126037902930912088908694202851064018<br/>
+21543994571568059418727489980942547421735824010636<br/>
+77404595741785160829230135358081840096996372524230<br/>
+56085590370062427124341690900415369010593398383577<br/>
+79394109700277534720000000000000000000000000000000<br/>
+00000000000000000000000000000000000000000000000000<br/>
+00000000000000000000000000000000000000000000000000<br/>
+00000000000000000000000000000000000000000000000000<br/>
+00000000000000000000000000000000000000000000000000<br/>
+00000000000000000.<br/>
+</p></div></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="big-endian.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../B.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="bigot.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">big-endian </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> bigot</td></tr></table></div></body></html>

@@ -1,0 +1,23 @@
+/* Jargon File stylesheet */
+
+/* background image for all jargon pages */
+body {
+	background-image: url(graphics/linen2d.jpg);
+        background-color: #e1d7c8;
+        color: #000000;
+ }
+
+/* default colors used by Mozilla, Galeon, and IE */
+a:link    {color: #0000cf;}
+a:link:visited {color: #51188e;}
+a:link:active  {color: #ff0000;}
+
+/* for the jargon file itself */
+div.caption	{text-align: center; font-weight: bold;}
+h3.title	{text-align: center;}
+.mediaobject	{text-align: center;}
+
+/* handles translation of <center> by tidy */
+h1, h2, h3	{font-family: Helvetica, Univers, sans-serif}
+h1.centered	{text-align: center;}
+p.c2		{font-weight: bold}

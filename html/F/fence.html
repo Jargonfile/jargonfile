@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>fence</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../F.html" title="F"/><link rel="previous" href="feetch-feetch.html" title="feetch feetch"/><link rel="next" href="fencepost-error.html" title="fencepost error"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">fence</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="feetch-feetch.html">Prev</a> </td><th width="60%" align="center">F</th><td width="20%" align="right"> <a accesskey="n" href="fencepost-error.html">Next</a></td></tr></table><hr/></div><dt><a id="fence"/><dt xmlns="" id="fence"><b>fence</b></dt></dt><dd><p> <span class="grammar">n.</span> </p></dd><dd><p> 1. A sequence of one or more distinguished
+   (<a href="../O/out-of-band.html"><i class="glossterm">out-of-band</i></a>) characters (or other data items), used
+   to delimit a piece of data intended to be treated as a unit (the
+   computer-science literature calls this a <span class="firstterm">sentinel</span>).  The NUL (ASCII 0000000) character
+   that terminates strings in C is a fence.  Hex FF is also (though slightly
+   less frequently) used this way.  See <a href="../Z/zigamorph.html"><i class="glossterm">zigamorph</i></a>.
+   </p></dd><dd><p> 2. An extra data value inserted in an array or other data structure
+   in order to allow some normal test on the array's contents also to function
+   as a termination test.  For example, a highly optimized routine for finding
+   a value in an array might artificially place a copy of the value to be
+   searched for after the last slot of the array, thus allowing the main
+   search loop to search for the value without having to check at each pass
+   whether the end of the array had been reached.  </p></dd><dd><p> 3. [among users of optimizing compilers] Any technique, usually
+   exploiting knowledge about the compiler, that blocks certain optimizations.
+   Used when explicit mechanisms are not available or are overkill.  Typically
+   a hack: &#8220;<span class="quote">I call a dummy procedure there to force a flush of the
+   optimizer's register-coloring info</span>&#8221; can be expressed by the shorter
+   &#8220;<span class="quote">That's a fence procedure</span>&#8221;.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="feetch-feetch.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../F.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="fencepost-error.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">feetch feetch </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> fencepost error</td></tr></table></div></body></html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Duff's device</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../D.html" title="D"/><link rel="previous" href="dub-dub-dub.html" title="dub dub dub"/><link rel="next" href="dumb-terminal.html" title="dumb terminal"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Duff's device</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="dub-dub-dub.html">Prev</a> </td><th width="60%" align="center">D</th><td width="20%" align="right"> <a accesskey="n" href="dumb-terminal.html">Next</a></td></tr></table><hr/></div><dt><a id="Duffs-device"/><dt xmlns="" id="Duffs-device"><b>Duff's device</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> The most dramatic use yet seen of 
+   <a href="../F/fall-through.html"><i class="glossterm">fall through</i></a> in C, invented by Tom Duff when he was at Lucasfilm.
+   Trying to optimize all the instructions he could out of an inner loop that
+   copied data serially onto an output port, he decided to unroll it.  He then
+   realized that the unrolled version could be implemented by
+   <span class="emphasis"><em>interlacing</em></span> the structures of a switch and a
+   loop:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+   register n = (count + 7) / 8;      /* count &gt; 0 assumed */
+
+   switch (count % 8)
+   {
+   case 0:        do {  *to = *from++;
+   case 7:              *to = *from++;
+   case 6:              *to = *from++;
+   case 5:              *to = *from++;
+   case 4:              *to = *from++;
+   case 3:              *to = *from++;
+   case 2:              *to = *from++;
+   case 1:              *to = *from++;
+                      } while (--n &gt; 0);
+   }
+</pre></td></tr></table><p>Shocking though it appears to all who encounter it for the first
+   time, the device is actually perfectly valid, legal C.  C's default
+   <a href="../F/fall-through.html"><i class="glossterm">fall through</i></a> in case statements has long been its
+   most controversial single feature; Duff observed that &#8220;<span class="quote">This code
+   forms some sort of argument in that debate, but I'm not sure whether it's
+   for or against.</span>&#8221; Duff has discussed the device in detail at <a href="http://www.lysator.liu.se/c/duffs-device.html" target="_top">http://www.lysator.liu.se/c/duffs-device.html</a>.
+   Note that the omission of postfix <b class="command">++</b> from
+   <b class="command">*to</b> was intentional (though confusing).
+   Duff's device can be used to implement memory copy, but the original aim
+   was to copy values serially into a magic IO register.</p><p>[For maximal obscurity, the outermost pair of braces above could
+   actually be removed &#8212; GLS]</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="dub-dub-dub.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../D.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="dumb-terminal.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">dub dub dub </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> dumb terminal</td></tr></table></div></body></html>

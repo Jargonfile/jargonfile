@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>bit-paired keyboard</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../B.html" title="B"/><link rel="previous" href="bit-twiddling.html" title="bit twiddling"/><link rel="next" href="bitblt.html" title="bitblt"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">bit-paired keyboard</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bit-twiddling.html">Prev</a> </td><th width="60%" align="center">B</th><td width="20%" align="right"> <a accesskey="n" href="bitblt.html">Next</a></td></tr></table><hr/></div><dt><a id="bit-paired-keyboard"/><dt xmlns="" id="bit-paired-keyboard"><b>bit-paired keyboard</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.,obs.</span></dt></dt><dd><p> (alt.: <span class="firstterm">bit-shift keyboard</span>) A
+   non-standard keyboard layout that seems to have originated with the
+   Teletype ASR-33 and remained common for several years on early computer
+   equipment.  The ASR-33 was a mechanical device (see
+   <a href="../E/EOU.html"><i class="glossterm">EOU</i></a>), so the only way to generate the character
+   codes from keystrokes was by some physical linkage.  The design of the
+   ASR-33 assigned each character key a basic pattern that could be modified
+   by flipping bits if the SHIFT or the CTRL key was pressed.  In order to
+   avoid making the thing even more of a kluge than it already was, the design
+   had to group characters that shared the same basic bit pattern on one
+   key.</p><p>Looking at the ASCII chart, we find:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="screen">
+high  low bits
+bits  0000 0001 0010 0011 0100 0101 0110 0111 1000 1001
+ 010        !    &quot;    #    $    %    &amp;    '    (    )
+ 011   0    1    2    3    4    5    6    7    8    9
+</pre></td></tr></table><p>This is why the characters !&quot;#$%&amp;'() appear where they do on a
+   Teletype (thankfully, they didn't use shift-0 for space). The Teletype
+   Model 33 was actually designed before ASCII existed, and was originally
+   intended to use a code that contained these two rows:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="screen">
+      low bits
+high  0000  0010  0100  0110  1000  1010  1100  1110
+bits     0001  0011  0101  0111  1001  1011  1101  1111
+  10   )  ! bel #  $  % wru &amp;  *  (  &quot;  :  ?  _  ,   .
+  11   0  1  2  3  4  5  6  7  8  9  '  ;  /  - esc del
+</pre></td></tr></table><p>The result would have been something closer to a normal keyboard.
+   But as it happened, Teletype had to use a lot of persuasion just to keep
+   ASCII, and the Model 33 keyboard, from looking like this instead:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="screen">
+          !  &quot;  ?  $  '  &amp;  -  (  )  ;  :  *  /  ,  .
+       0  1  2  3  4  5  6  7  8  9  +  ~  &lt;  &gt;  ×  |
+</pre></td></tr></table><p>Teletype's was <span class="emphasis"><em>not</em></span> the weirdest variant of the
+   <a href="../Q/QWERTY.html"><i class="glossterm">QWERTY</i></a> layout widely seen, by the way; that prize
+   should probably go to one of several (differing) arrangements on IBM's even
+   clunkier 026 and 029 card punches.</p><p>When electronic terminals became popular, in the early 1970s, there
+   was no agreement in the industry over how the keyboards should be laid out.
+   Some vendors opted to emulate the Teletype keyboard, while others used the
+   flexibility of electronic circuitry to make their product look like an
+   office typewriter.  Either choice was supported by the ANSI computer
+   keyboard standard, X4.14-1971, which referred to the alternatives as
+   &#8220;<span class="quote">logical bit pairing</span>&#8221; and &#8220;<span class="quote">typewriter
+   pairing</span>&#8221;. These alternatives became known as <span class="firstterm">bit-paired</span> and <span class="firstterm">typewriter-paired</span> keyboards.  To a hacker, the
+   bit-paired keyboard seemed far more logical &#8212; and because most
+   hackers in those days had never learned to touch-type, there was little
+   pressure from the pioneering users to adapt keyboards to the typewriter
+   standard.</p><p>The doom of the bit-paired keyboard was the large-scale introduction
+   of the computer terminal into the normal office environment, where
+   out-and-out technophobes were expected to use the equipment.  The <span class="firstterm">typewriter-paired</span> standard became universal,
+   X4.14 was superseded by X4.23-1982, <span class="firstterm">bit-paired</span> hardware was quickly junked or
+   relegated to dusty corners, and both terms passed into disuse.</p><p>However, in countries without a long history of touch typing, the
+   argument against the bit-paired keyboard layout was weak or nonexistent. As
+   a result, the standard Japanese keyboard, used on PCs, Unix boxen
+   etc. still has all of the !&quot;#$%&amp;'() characters above the numbers in the
+   ASR-33 layout.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bit-twiddling.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../B.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="bitblt.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">bit twiddling </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> bitblt</td></tr></table></div></body></html>

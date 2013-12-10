@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>memory leak</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../M.html" title="M"/><link rel="previous" href="memory-farts.html" title="memory farts"/><link rel="next" href="memory-smash.html" title="memory smash"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">memory leak</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="memory-farts.html">Prev</a> </td><th width="60%" align="center">M</th><td width="20%" align="right"> <a accesskey="n" href="memory-smash.html">Next</a></td></tr></table><hr/></div><dt><a id="memory-leak"/><dt xmlns="" id="memory-leak"><b>memory leak</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> An error in a program's dynamic-store allocation logic that causes
+   it to fail to reclaim discarded memory, leading to eventual collapse due to
+   memory exhaustion.  Also (esp. at CMU) called 
+   <a href="../C/core-leak.html"><i class="glossterm">core leak</i></a>.  These problems were severe on older machines with small,
+   fixed-size address spaces, and special &#8220;<span class="quote">leak detection</span>&#8221; tools
+   were commonly written to root them out.  With the advent of virtual memory,
+   it is unfortunately easier to be sloppy about wasting a bit of memory
+   (although when you run out of memory on a VM machine, it means you've got a
+   <span class="emphasis"><em>real</em></span> leak!).  See <a href="../A/aliasing-bug.html"><i class="glossterm">aliasing bug</i></a>,
+   <a href="../F/fandango-on-core.html"><i class="glossterm">fandango on core</i></a>, 
+   <a href="../S/smash-the-stack.html"><i class="glossterm">smash the stack</i></a>, <a href="../P/precedence-lossage.html"><i class="glossterm">precedence lossage</i></a>,
+   <a href="../O/overrun-screw.html"><i class="glossterm">overrun screw</i></a>, <a href="../L/leaky-heap.html"><i class="glossterm">leaky heap</i></a>,
+   <a href="../L/leak.html"><i class="glossterm">leak</i></a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="memory-farts.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../M.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="memory-smash.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">memory farts </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> memory smash</td></tr></table></div></body></html>

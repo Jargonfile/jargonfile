@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>bit bang</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../B.html" title="B"/><link rel="previous" href="bit.html" title="bit"/><link rel="next" href="bit-bashing.html" title="bit bashing"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">bit bang</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bit.html">Prev</a> </td><th width="60%" align="center">B</th><td width="20%" align="right"> <a accesskey="n" href="bit-bashing.html">Next</a></td></tr></table><hr/></div><dt><a id="bit-bang"/><dt xmlns="" id="bit-bang"><b>bit bang</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> Transmission of data on a serial line, when accomplished by rapidly
+   tweaking a single output bit, in software, at the appropriate times.  The
+   technique is a simple loop with eight OUT and SHIFT instruction pairs for
+   each byte.  Input is more interesting.  And full duplex (doing input and
+   output at the same time) is one way to separate the real hackers from the
+   <a href="../W/wannabee.html"><i class="glossterm">wannabee</i></a>s.</p></dd><dd><p>Bit bang was used on certain early models of Prime computers,
+   presumably when UARTs were too expensive, and on archaic Z80 micros with a
+   Zilog PIO but no SIO.  In an interesting instance of the <a href="../C/cycle-of-reincarnation.html"><i class="glossterm">cycle
+   of reincarnation</i></a>, this technique returned to use in the early
+   1990s on some RISC architectures because it consumes such an infinitesimal
+   part of the processor that it actually makes sense not to have a UART.
+   Compare <a href="../C/cycle-of-reincarnation.html"><i class="glossterm">cycle of reincarnation</i></a>. Nowadays it's used
+   to describe I2C, a serial protocol for monitoring motherboard
+   hardware.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bit.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../B.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="bit-bashing.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">bit </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> bit bashing</td></tr></table></div></body></html>

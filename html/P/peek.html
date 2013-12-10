@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>peek</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../P.html" title="P"/><link rel="previous" href="PEBKAC.html" title="PEBKAC"/><link rel="next" href="pencil-and-paper.html" title="pencil and paper"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">peek</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="PEBKAC.html">Prev</a> </td><th width="60%" align="center">P</th><td width="20%" align="right"> <a accesskey="n" href="pencil-and-paper.html">Next</a></td></tr></table><hr/></div><dt><a id="peek"/><dt xmlns="" id="peek"><b>peek</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.,vt.</span></dt></dt><dd><p> (and <a href="poke.html"><i class="glossterm">poke</i></a>) The commands in most microcomputer
+   BASICs for directly accessing memory contents at an absolute address; often
+   extended to mean the corresponding constructs in any
+   <a href="../H/HLL.html"><i class="glossterm">HLL</i></a> (peek reads memory, poke modifies it).  Much
+   hacking on small, non-MMU micros used to consist of <span class="firstterm">peek</span>ing around memory, more or less at random,
+   to find the location where the system keeps interesting stuff.  Long (and
+   variably accurate) lists of such addresses for various computers
+   circulated.  The results of <span class="firstterm">poke</span>s at
+   these addresses may be highly useful, mildly amusing, useless but neat, or
+   (most likely) total <a href="../L/lossage.html"><i class="glossterm">lossage</i></a> (see 
+   <a href="../K/killer-poke.html"><i class="glossterm">killer poke</i></a>).</p><p>Since a <a href="../R/real-operating-system.html"><i class="glossterm">real operating system</i></a> provides useful,
+   higher-level services for the tasks commonly performed with peeks and pokes
+   on micros, and real languages tend not to encourage low-level memory
+   groveling, a question like &#8220;<span class="quote">How do I do a peek in C?</span>&#8221; is
+   diagnostic of the <a href="../N/newbie.html"><i class="glossterm">newbie</i></a>.  (Of course, OS kernels
+   often have to do exactly this; a real kernel hacker would unhesitatingly,
+   if unportably, assign an absolute address to a pointer variable and
+   indirect through it.)</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="PEBKAC.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../P.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="pencil-and-paper.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">PEBKAC </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> pencil and paper</td></tr></table></div></body></html>

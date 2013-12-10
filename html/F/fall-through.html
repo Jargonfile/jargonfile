@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>fall through</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../F.html" title="F"/><link rel="previous" href="fall-over.html" title="fall over"/><link rel="next" href="fan.html" title="fan"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">fall through</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="fall-over.html">Prev</a> </td><th width="60%" align="center">F</th><td width="20%" align="right"> <a accesskey="n" href="fan.html">Next</a></td></tr></table><hr/></div><dt><a id="fall-through"/><dt xmlns="" id="fall-through"><b>fall through</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">v.</span></dt></dt><dd><p> (n. <span class="firstterm">fallthrough</span>, var.:
+   <span class="firstterm">fall-through</span>) </p></dd><dd><p> 1. To exit a loop by exhaustion, i.e., by having fulfilled its exit
+   condition rather than via a break or exception condition that exits from
+   the middle of it.  This usage appears to be <span class="emphasis"><em>really</em></span>
+   old, dating from the 1940s and 1950s.  </p></dd><dd><p> 2. To fail a test that would have passed control to a subroutine or
+   some other distant portion of code.  </p></dd><dd><p> 3. In C, &#8216;fall-through&#8217; occurs when the flow of
+   execution in a switch statement reaches a <b class="command">case</b> label other than by jumping there from the
+   switch header, passing a point where one would normally expect to find a
+   <b class="command">break</b>.  A trivial example:</p><div class="literallayout"><p><br/>
+switch (color)<br/>
+{<br/>
+case GREEN:<br/>
+   do_green();<br/>
+   break;<br/>
+case PINK:<br/>
+   do_pink();<br/>
+   /* FALL THROUGH */<br/>
+case RED:<br/>
+   do_red();<br/>
+   break;<br/>
+default:<br/>
+   do_blue();<br/>
+   break;<br/>
+}<br/>
+</p></div><p>The variant spelling <tt class="filename">/* FALL THRU */</tt> is also
+   common.</p><p>The effect of the above code is to
+   <span class="citerefentry"><span class="refentrytitle">do_green</span>()</span>
+   when color is <b class="command">GREEN</b>,
+   <span class="citerefentry"><span class="refentrytitle">do_red</span>()</span>
+   when color is <b class="command">RED</b>,
+   <span class="citerefentry"><span class="refentrytitle">do_blue</span>()</span>
+   on any other color other than <b class="command">PINK</b>, and
+   (and this is the important part)
+   <span class="citerefentry"><span class="refentrytitle">do_pink</span>()</span>
+   <span class="emphasis"><em>and then</em></span>
+   <span class="citerefentry"><span class="refentrytitle">do_red</span>()</span>
+   when color is <b class="command">PINK</b>.  Fall-through is
+   <a href="../C/considered-harmful.html"><i class="glossterm">considered harmful</i></a> by some, though there are
+   contexts (such as the coding of state machines) in which it is natural; it
+   is generally considered good practice to include a comment highlighting the
+   fall-through where one would normally expect a break.  See also
+   <a href="../D/Duffs-device.html"><i class="glossterm">Duff's device</i></a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="fall-over.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../F.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="fan.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">fall over </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> fan</td></tr></table></div></body></html>

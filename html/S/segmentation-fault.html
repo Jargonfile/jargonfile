@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>segmentation fault</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../S.html" title="S"/><link rel="previous" href="segment.html" title="segment"/><link rel="next" href="segv.html" title="segv"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">segmentation fault</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="segment.html">Prev</a> </td><th width="60%" align="center">S</th><td width="20%" align="right"> <a accesskey="n" href="segv.html">Next</a></td></tr></table><hr/></div><dt><a id="segmentation-fault"/><dt xmlns="" id="segmentation-fault"><b>segmentation fault</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [Unix] </p></dd><dd><p> 1. [techspeak] An error in which a running program attempts to
+   access memory not allocated to it and <a href="../C/core-dump.html"><i class="glossterm">core dump</i></a>s
+   with a segmentation violation error.  This is often caused by improper
+   usage of pointers in the source code, dereferencing a null pointer, or (in
+   C) inadvertently using a non-pointer variable as a pointer.  The classic
+   example is:</p><div class="literallayout"><p><br/>
+   int i;<br/>
+   scanf (&quot;%d&quot;, i);  /* should have used &amp;i */<br/>
+</p></div></dd><dd><p> 2. To lose a train of thought or a line of reasoning.  Also uttered
+   as an exclamation at the point of befuddlement.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="segment.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../S.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="segv.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">segment </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> segv</td></tr></table></div></body></html>

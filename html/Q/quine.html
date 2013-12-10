@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>quine</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../Q.html" title="Q"/><link rel="previous" href="quick-and-dirty.html" title="quick-and-dirty"/><link rel="next" href="Quirk-objection.html" title="Quirk objection"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">quine</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="quick-and-dirty.html">Prev</a> </td><th width="60%" align="center">Q</th><td width="20%" align="right"> <a accesskey="n" href="Quirk-objection.html">Next</a></td></tr></table><hr/></div><dt><a id="quine"/><dt xmlns="" id="quine"><b>quine</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="pronunciation">/kwi:n/</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [from the name of the logician Willard van Orman Quine, via Douglas
+   Hofstadter] A program that generates a copy of its own source text as its
+   complete output.  Devising the shortest possible quine in some given
+   programming language is a common hackish amusement.  (We ignore some
+   variants of BASIC in which a program consisting of a single empty string
+   literal reproduces itself trivially.)  Here is one classic quine:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+((lambda (x)
+  (list x (list (quote quote) x)))
+ (quote
+    (lambda (x)
+      (list x (list (quote quote) x)))))
+</pre></td></tr></table><p>This one works in LISP or Scheme.  It's relatively easy to write
+   quines in other languages such as Postscript which readily handle programs
+   as data; much harder (and thus more challenging!)  in languages like C
+   which do not.  Here is a classic C quine for ASCII machines:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+char*f=&quot;char*f=%c%s%c;main()
+{printf(f,34,f,34,10);}%c&quot;;
+main(){printf(f,34,f,34,10);}
+</pre></td></tr></table><p>For excruciatingly exact quinishness, remove the interior line
+   breaks.  Here is another elegant quine in ANSI C:</p><table border="0" bgcolor="#E0E0E0"><tr><td><pre class="programlisting">
+#define q(k)main(){return!puts(#k&quot;\nq(&quot;#k&quot;)&quot;);}
+q(#define q(k)main(){return!puts(#k&quot;\nq(&quot;#k&quot;)&quot;);})
+</pre></td></tr></table><p>Some infamous <a href="../O/Obfuscated-C-Contest.html"><i class="glossterm">Obfuscated C Contest</i></a> entries
+   have been quines that reproduced in exotic ways.  There is an amusing
+   <a href="http://www.nyx.org/~gthompso/quine.htm" target="_top"> Quine Home
+   Page</a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="quick-and-dirty.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../Q.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="Quirk-objection.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">quick-and-dirty </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> Quirk objection</td></tr></table></div></body></html>

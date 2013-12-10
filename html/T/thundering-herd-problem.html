@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>thundering herd problem</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../T.html" title="T"/><link rel="previous" href="thumb.html" title="thumb"/><link rel="next" href="thunk.html" title="thunk"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">thundering herd problem</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="thumb.html">Prev</a> </td><th width="60%" align="center">T</th><td width="20%" align="right"> <a accesskey="n" href="thunk.html">Next</a></td></tr></table><hr/></div><dt><a id="thundering-herd-problem"/><dt xmlns="" id="thundering-herd-problem"><b>thundering herd problem</b></dt></dt><dd><p> Scheduler thrashing.  This can happen under Unix when you have a
+   number of processes that are waiting on a single event. When that event (a
+   connection to the web server, say) happens, every process which could
+   possibly handle the event is awakened.  In the end, only one of those
+   processes will actually be able to do the work, but, in the meantime, all
+   the others wake up and contend for CPU time before being put back to
+   sleep. Thus the system thrashes briefly while a herd of processes thunders
+   through. If this starts to happen many times per second, the performance
+   impact can be significant.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="thumb.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../T.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="thunk.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">thumb </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> thunk</td></tr></table></div></body></html>

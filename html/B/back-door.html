@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>back door</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../B.html" title="B"/><link rel="previous" href="B5.html" title="B5"/><link rel="next" href="backbone-cabal.html" title="backbone cabal"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">back door</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="B5.html">Prev</a> </td><th width="60%" align="center">B</th><td width="20%" align="right"> <a accesskey="n" href="backbone-cabal.html">Next</a></td></tr></table><hr/></div><dt><a id="back-door"/><dt xmlns="" id="back-door"><b>back door</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> [common] A hole in the security of a system deliberately left in
+   place by designers or maintainers.  The motivation for such holes is not
+   always sinister; some operating systems, for example, come out of the box
+   with privileged accounts intended for use by field service technicians or
+   the vendor's maintenance programmers.  Syn.  
+   <a href="../T/trap-door.html"><i class="glossterm">trap door</i></a>; may also be called a <span class="firstterm">wormhole</span>.  See also 
+   <a href="../I/iron-box.html"><i class="glossterm">iron box</i></a>, <a href="../C/cracker.html"><i class="glossterm">cracker</i></a>,
+   <a href="../W/worm.html"><i class="glossterm">worm</i></a>, <a href="../L/logic-bomb.html"><i class="glossterm">logic bomb</i></a>.</p><p>Historically, back doors have often lurked in systems longer than
+   anyone expected or planned, and a few have become widely known.  Ken
+   Thompson's 1983 Turing Award lecture to the ACM admitted the existence of a
+   back door in early Unix versions that may have qualified as the most
+   fiendishly clever security hack of all time.  In this scheme, the C
+   compiler contained code that would recognize when the <span class="firstterm">login</span> command was being recompiled and insert
+   some code recognizing a password chosen by Thompson, giving him entry to
+   the system whether or not an account had been created for him.</p><p>Normally such a back door could be removed by removing it from the
+   source code for the compiler and recompiling the compiler.  But to
+   recompile the compiler, you have to <span class="emphasis"><em>use</em></span> the compiler
+   &#8212; so Thompson also arranged that the compiler would
+   <span class="emphasis"><em>recognize when it was compiling a version of itself</em></span>,
+   and insert into the recompiled compiler the code to insert into the
+   recompiled <span class="firstterm">login</span> the code to allow
+   Thompson entry &#8212; and, of course, the code to recognize itself and do
+   the whole thing again the next time around!  And having done this once, he
+   was then able to recompile the compiler from the original sources; the hack
+   perpetuated itself invisibly, leaving the back door in place and active but
+   with no trace in the sources.</p><p>The Turing lecture that reported this truly moby hack was later
+   published as &#8220;<span class="quote">Reflections on Trusting Trust</span>&#8221;,
+   <i class="citetitle">Communications of the ACM 27</i>, 8 (August 1984),
+   pp. 761--763 (text available at <a href="http://www.acm.org/classics/sep95/" target="_top">http://www.acm.org/classics/</a>).
+   Ken Thompson has since confirmed that this hack was implemented and that
+   the Trojan Horse code did appear in the login binary of a Unix Support
+   group machine.  Ken says the crocked compiler was never distributed.  Your
+   editor has heard two separate reports that suggest that the crocked login
+   did make it out of Bell Labs, notably to BBN, and that it enabled at least
+   one late-night login across the network by someone using the login name
+   &#8220;<span class="quote">kt</span>&#8221;.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="B5.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../B.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="backbone-cabal.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">B5 </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> backbone cabal</td></tr></table></div></body></html>

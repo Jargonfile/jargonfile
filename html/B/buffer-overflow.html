@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>buffer overflow</title><link rel="stylesheet" href="../../jargon.css" type="text/css"/><meta name="generator" content="DocBook XSL Stylesheets V1.61.0"/><link rel="home" href="../index.html" title="The Jargon File"/><link rel="up" href="../B.html" title="B"/><link rel="previous" href="buffer-chuck.html" title="buffer chuck"/><link rel="next" href="bug.html" title="bug"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">buffer overflow</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="buffer-chuck.html">Prev</a> </td><th width="60%" align="center">B</th><td width="20%" align="right"> <a accesskey="n" href="bug.html">Next</a></td></tr></table><hr/></div><dt><a id="buffer-overflow"/><dt xmlns="" id="buffer-overflow"><b>buffer overflow</b>: <span xmlns="http://www.w3.org/1999/xhtml" class="grammar">n.</span></dt></dt><dd><p> What happens when you try to stuff more data into a buffer (holding
+   area) than it can handle.  This problem is commonly exploited by
+   <a href="../C/cracker.html"><i class="glossterm">cracker</i></a>s to get arbitrary commands executed by a
+   program running with root permissions.  This may be due to a mismatch in
+   the processing rates of the producing and consuming processes (see
+   <a href="../O/overrun.html"><i class="glossterm">overrun</i></a> and 
+   <a href="../F/firehose-syndrome.html"><i class="glossterm">firehose syndrome</i></a>), or because the buffer is simply too small to hold
+   all the data that must accumulate before a piece of it can be processed.
+   For example, in a text-processing tool that <a href="../C/crunch.html"><i class="glossterm">crunch</i></a>es
+   a line at a time, a short line buffer can result in
+   <a href="../L/lossage.html"><i class="glossterm">lossage</i></a> as input from a long line overflows the
+   buffer and trashes data beyond it.  Good defensive programming would check
+   for overflow on each character and stop accepting data when the buffer is
+   full up.  The term is used of and by humans in a metaphorical sense.
+   &#8220;<span class="quote">What time did I agree to meet you?  My buffer must have
+   overflowed.</span>&#8221; Or &#8220;<span class="quote">If I answer that phone my buffer is going to
+   overflow.</span>&#8221; See also <a href="../S/spam.html"><i class="glossterm">spam</i></a>, 
+   <a href="../O/overrun-screw.html"><i class="glossterm">overrun screw</i></a>.</p></dd><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="buffer-chuck.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="../B.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="bug.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">buffer chuck </td><td width="20%" align="center"><a accesskey="h" href="../index.html">Home</a></td><td width="40%" align="right" valign="top"> bug</td></tr></table></div></body></html>
