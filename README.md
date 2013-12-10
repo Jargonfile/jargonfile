@@ -9,5 +9,5 @@ He has abandoned updating the file with modern updates, and personal posts on hi
 - When he took control of the file he deleted many of the original entries and re-wrote others.
 - He has posted hateful speech towards transexuals, which is against the spirit of modern day hacker culture. (http://esr.ibiblio.org/?p=5015)
 - Horribly racist rants calling african americans and non-white subhuman. (http://esr.ibiblio.org/?p=5001)
-#  I welcome all pull requests and hope that today will start a new beginning for the jargon file.
+# I welcome all pull requests and hope that today will start a new beginning for the jargon file.
  
